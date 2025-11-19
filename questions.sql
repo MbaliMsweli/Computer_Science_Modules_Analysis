@@ -1,3 +1,5 @@
+
+
 -- 1. Write a query to display all rows from the course_curriculum table.
 
 -- 2. Write a query to show only the Module_Code and Module_Description columns.
