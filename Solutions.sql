@@ -117,7 +117,7 @@ WHERE Module_Code LIKE 'COS%'
 -- 21. Write a query to list all modules whose description contains '212'.
 SELECT* 
 FROM [dbo].[course_curriculum]
-WHERE Module_Code LIKE 'COS%'   -- ???????? This not correct @Kamogelo-DA  
+WHERE Module_Code LIKE '%212%'   -- ???????? This not correct @Kamogelo-DA  
 
 
 -- 22. Write a query to show all module descriptions that contain the word 'project'.
