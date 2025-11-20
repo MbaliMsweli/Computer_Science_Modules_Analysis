@@ -34,7 +34,7 @@ WHERE Module_Type = 'Elective module'
 -- 6. Write a query to find all modules with more than 15 credits.
 SELECT*
 FROM [dbo].[course_curriculum]
-WHERE Module_Credits = 15  -- ? This is not correct it says more than 14  ???????
+WHERE Module_Credits = 15  -- ? This is not correct it says more than 15  ???????
 
 -- 7. Write a query to find the module with the code 'COS 216'.
 SELECT*
@@ -117,7 +117,7 @@ WHERE Module_Code LIKE 'COS%'
 -- 21. Write a query to list all modules whose description contains '212'.
 SELECT* 
 FROM [dbo].[course_curriculum]
-WHERE Module_Code LIKE 'COS%'   -- ???????? This not correct @Kamogelo-DA
+WHERE Module_Code LIKE 'COS%'   -- ???????? This not correct @Kamogelo-DA  
 
 
 -- 22. Write a query to show all module descriptions that contain the word 'project'.
