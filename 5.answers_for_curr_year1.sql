@@ -111,3 +111,8 @@
 	FROM [dbo].[computer_science_curriculum_year1]
 	GROUP BY Module_Type
 	HAVING ( SUM(Module_Credits)) > 30;
+
+    -- 20. Write a query to list all modules whose module code starts with 'COS'.
+	SELECT *
+	FROM [dbo].[computer_science_curriculum_year1]
+	WHERE Module_Code LIKE 'COS%';
