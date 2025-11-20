@@ -34,7 +34,7 @@ WHERE Module_Type = 'Elective module'
 -- 6. Write a query to find all modules with more than 15 credits.
 SELECT*
 FROM [dbo].[course_curriculum]
-WHERE Module_Credits = 15
+WHERE Module_Credits = 15  -- ? This is not correct it says more than 14  ???????
 
 -- 7. Write a query to find the module with the code 'COS 216'.
 SELECT*
@@ -117,7 +117,7 @@ WHERE Module_Code LIKE 'COS%'
 -- 21. Write a query to list all modules whose description contains '212'.
 SELECT* 
 FROM [dbo].[course_curriculum]
-WHERE Module_Code LIKE 'COS%'
+WHERE Module_Code LIKE 'COS%'   -- ???????? This not correct @Kamogelo-DA
 
 
 -- 22. Write a query to show all module descriptions that contain the word 'project'.
@@ -144,12 +144,12 @@ WHERE Module_Type = 'Elective Module'
 -- 26. Write a query to delete the module 'JCP 202' from the table.
 UPDATE [dbo].[course_curriculum]
 SET Module_Code = NULL
-WHERE Course_Id = 1
+WHERE Course_Id = 1  ------Not correct ????? @Kamogelo-DA
 
 -- 27. Write a query to delete all modules with credits less than 10. **changed to <=16
 DELETE
 FROM [dbo].[course_curriculum]
-WHERE	(Module_credits) <= 16
+WHERE	(Module_credits) <= 16      -------??????? @Kamogelo-DA
 
 
 -- 28. Write a query to delete all Fundamental modules.**querried before no:27
