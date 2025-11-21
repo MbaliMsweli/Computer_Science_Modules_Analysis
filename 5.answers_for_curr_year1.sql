@@ -130,13 +130,13 @@
 	WHERE Module_Description LIKE' % project %';
 
 
--- 23. Write a query to correct the spelling of 'Netcentric computer sysytems 216' to 'Netcentric computer systems 216'.
+-- 23. Write a query to correct the spelling of 'General Chemiststry 117' to 'General Chemiststry 117'.
 	
 	UPDATE [dbo].[computer_science_curriculum_year1]
 	SET Module_Description = REPLACE (Module_Description, 'General Chemiststry 117', 'General Chemistry 117')
 	WHERE Module_Description LIKE '%General Chemistry 117';
 	
--- 24. Write a query to change the credits of COS 212 to 20 credits.
+-- 24. Write a query to change the credits of COS 112 to 20 credits.
 
 	UPDATE [dbo].[computer_science_curriculum_year1]
 	SET Module_Credits = 20 
@@ -148,7 +148,7 @@
 	SET Module_Type = REPLACE (Module_Type, 'Elective modules', 'Core modules')
 	WHERE Module_Type = 'Elective modules';
 
--- 26. Write a query to delete the module 'JCP 202' from the table.
+-- 26. Write a query to delete the module 'AIM 111' from the table.
 		
 	DELETE [dbo].[computer_science_curriculum_year1]
 	WHERE Module_Code = 'AIM 111'
