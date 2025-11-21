@@ -116,3 +116,65 @@
 	SELECT *
 	FROM [dbo].[computer_science_curriculum_year1]
 	WHERE Module_Code LIKE 'COS%';
+
+	-- 21. Write a query to list all modules whose description contains '212'.
+	
+	SELECT *
+	FROM [dbo].[computer_science_curriculum_year1]
+	WHERE Module_Description LIKE' % 212 %';
+
+-- 22. Write a query to show all module descriptions that contain the word 'project'.
+	
+	SELECT *
+	FROM [dbo].[computer_science_curriculum_year1]
+	WHERE Module_Description LIKE' % project %';
+
+
+-- 23. Write a query to correct the spelling of 'Netcentric computer sysytems 216' to 'Netcentric computer systems 216'.
+	
+	UPDATE [dbo].[computer_science_curriculum_year1]
+	SET Module_Description = REPLACE (Module_Description, 'General Chemiststry 117', 'General Chemistry 117')
+	WHERE Module_Description LIKE '%General Chemistry 117';
+	
+-- 24. Write a query to change the credits of COS 212 to 20 credits.
+
+	UPDATE [dbo].[computer_science_curriculum_year1]
+	SET Module_Credits = 20 
+	WHERE Module_Code = 'COS 122';
+
+-- 25. Write a query to change all Elective modules to Core modules.
+
+	UPDATE [dbo].[computer_science_curriculum_year1]
+	SET Module_Type = REPLACE (Module_Type, 'Elective modules', 'Core modules')
+	WHERE Module_Type = 'Elective modules';
+
+-- 26. Write a query to delete the module 'JCP 202' from the table.
+		
+	DELETE [dbo].[computer_science_curriculum_year1]
+	WHERE Module_Code = 'AIM 111'
+
+-- 27. Write a query to delete all modules with credits less than 10.
+
+	DELETE FROM [dbo].[computer_science_curriculum_year1]
+	WHERE Module_Credits < 10
+
+-- 28. Write a query to delete all Fundamental modules.
+
+	DELETE FROM [dbo].[computer_science_curriculum_year1]
+	WHERE Module_Type = 'Fundamental modules'
+
+-- 29. Write an INSERT statement to add the module (COS 300, 'Advanced Database Systems', 20, 'Core module').
+		
+	INSERT INTO [dbo].[computer_science_curriculum_year1]
+	(Module_Code,Module_Description,Module_Credits, Module_Type)
+	VALUES ('COS 300', 'Advanced Database Systems', 20, 'Core module');
+
+-- 30. Write one INSERT statement to add:
+--     (COS 310, 'Machine Learning 310', 24, 'Core module')
+--     (STK 230, 'Business Statistics 230', 20, 'Elective module').
+
+	INSERT INTO [dbo].[computer_science_curriculum_year1]
+	(Module_Code,Module_Description,Module_Credits, Module_Type)
+	VALUES
+	('COS 310', 'Machine Learning 310', 24, 'Core module'),
+	('STK 230', 'Business Statistics 230', 20, 'Elective module');
